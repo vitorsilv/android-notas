@@ -7,12 +7,87 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_nome"
+        android:text="Diga seu nome:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+    />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/et_nome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome"
+        android:layout_marginTop="15sp"
+        android:hint="Nome"
+        android:inputType="text"
+    />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_nota1"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        android:text="Nota 1:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nota1"
+        android:layout_marginTop="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nota1"
+        android:hint="ex: 5.0"
+        android:inputType="numberDecimal"
+    />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        app:layout_constraintLeft_toRightOf="@+id/tv_nota1"
+        android:layout_marginLeft="45sp"
+        android:id="@+id/tv_nota2"
+        android:text="Nota 2:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nota2"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="50sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nota1"
+        app:layout_constraintLeft_toRightOf="@+id/et_nota1"
+        android:inputType="numberDecimal"
+        android:hint="ex: 3.0"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_calc"
+        app:layout_constraintTop_toBottomOf="@id/et_nota1"
+        android:onClick="calcularNota"
+        android:text="Avaliar!"
+    />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_resposta"
+        app:layout_constraintTop_toBottomOf="@+id/bt_calc"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
